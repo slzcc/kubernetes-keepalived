@@ -70,7 +70,7 @@ while true; do
     echo "Displaying resulting /etc/keepalived/keepalived.conf contents..."
     cat /etc/keepalived/keepalived.conf
     echo "Starting Keepalived in the background..."
-    /usr/sbin/keepalived --dont-fork --dump-conf --log-console --log-detail --vrrp &
+    /usr/sbin/keepalived --log-console &
     # Check if Keepalived is now running by recording it's PID (if it's not running $pid will be null):
     pid=$(pidof keepalived)
  
